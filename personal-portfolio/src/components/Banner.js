@@ -5,13 +5,16 @@ import 'animate.css';
 import headerImg from '../assets/img/headerImg.jpg';
 import TrackVisibility from 'react-on-screen';
 
+const toRotate = ['Software Engineer', 'Full Stack Developer'];
+const bannerText =
+  "A dedicated computer science professional with a Bachelor's degree in Computer Science from Tennessee Technological University. With valuable experience working with the Department of Energy (DOE) and other notable companies, including AO Smith and SAIC, I bring a strong skill set and a passion for software development. Proficient in programming languages such as C#, JavaScript, Python, and more, I have provided high-quality software solutions that meet the unique needs of each organization. I am committed to continuously expanding my knowledge to deliver innovative and impactful solutions. Let's connect and discuss how I can contribute to the growth and success of your organization.";
+
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ['Software Engineer', 'Full Stack Developer'];
   const period = 2000;
 
   useEffect(() => {
@@ -70,13 +73,7 @@ export const Banner = () => {
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
+                  <p>{bannerText}</p>
                   <button onClick={() => console.log('connect')}>
                     Let’s Connect <ArrowRightCircle size={25} />
                   </button>
