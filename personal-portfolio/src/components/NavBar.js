@@ -5,6 +5,7 @@ import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import { HashLink } from 'react-router-hash-link';
 import { BrowserRouter as Router } from 'react-router-dom';
+import resumeForPorfolio from '../assets/img/resumeForPortfolio.pdf';
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
@@ -28,6 +29,10 @@ export const NavBar = () => {
     setActiveLink(value);
   };
 
+  const openResumePDF = () => {
+    window.open(resumeForPorfolio);
+  };
+
   return (
     <Router>
       <Navbar expand="md" className={scrolled ? 'scrolled' : ''}>
@@ -48,15 +53,6 @@ export const NavBar = () => {
                 Home
               </Nav.Link>
               <Nav.Link
-                href="#skills"
-                className={
-                  activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'
-                }
-                onClick={() => onUpdateActiveLink('skills')}
-              >
-                Skills
-              </Nav.Link>
-              <Nav.Link
                 href="#projects"
                 className={
                   activeLink === 'projects'
@@ -74,8 +70,11 @@ export const NavBar = () => {
                   <img src={navIcon1} alt="" />
                 </a>
               </div>
+              <button onClick={openResumePDF}>
+                <span>Resume</span>
+              </button>
               <HashLink to="#connect">
-                <button className="vvd">
+                <button>
                   <span>Let’s Connect</span>
                 </button>
               </HashLink>
