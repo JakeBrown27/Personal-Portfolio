@@ -7,11 +7,22 @@ require('dotenv').config();
 
 // server used to send send emails
 const app = express();
-app.use(cors());
 app.use(express.json());
 app.use('/', router);
+app.use(express.static(path.resolve(__dirname, '../build')));
+
+// Enable CORS for both domains
+const allowedOrigins = [
+  'https://jake-brown-portfolio.onrender.com',
+  'https://jakebrowndeveloper.com',
+];
+app.use(
+  cors({
+    origin: allowedOrigins,
+  }),
+);
+
 app.listen(5000, () => console.log('Server Running'));
-app.use(express.static(path.resolve(__dirname, '/build')));
 
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
@@ -53,5 +64,5 @@ router.post('/contact', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '/build', 'index.html'));
+  res.sendFile(path.resolve(__dirname, '../build', 'index.html'));
 });
