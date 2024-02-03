@@ -6,7 +6,7 @@ import colorSharp2 from '../assets/img/color-sharp2.png';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-const projectText = `I currently have two projects as of right now. The first project is what you are viewing right now. This project is a personal portfolio website built using React, Node.js, and JavaScript. It showcases my skills, projects, and experiences in an interactive and visually appealing manner. The website is designed to provide visitors with a comprehensive overview of my work and abilities. I am also currently developing a top-down 2D RPG using the Unity game engine.This passion project allows me to enhance my C# skills while creating an immersive gaming experience. Both projects reflect my commitment to excellence and demonstrate my dedication to continuous learning and pushing boundaries in the digital realm.`;
+const projectText = `I am excited to present my current project – this portfolio website you're viewing now. Developed with React, Node.js, and JavaScript, it not only showcases my technical skills but also highlights my projects and experiences in a dynamic and visually engaging way. The design aims to give visitors a thorough insight into my work and capabilities. Additionally, I am delving into the AI/Machine Learning sector, aiming to integrate these cutting-edge technologies into future projects. I hope to portray my commitment to excellence, ongoing learning, and my passion for pushing the boundaries in the digital landscape.`;
 
 export const Projects = () => {
   const projects = [
@@ -14,11 +14,6 @@ export const Projects = () => {
       title: 'Personal Portfolio',
       description: 'React, Node.js, Javascript, Docker',
       imgUrl: projImg1,
-    },
-    {
-      title: 'Top Down 2D RPG',
-      description: '(Coming Soon)',
-      imgUrl: projImg2,
     },
   ];
 
