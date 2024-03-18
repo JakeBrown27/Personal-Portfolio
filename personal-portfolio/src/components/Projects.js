@@ -6,7 +6,7 @@ import colorSharp2 from '../assets/img/color-sharp2.png';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-const projectText = `I am excited to present my current project – this portfolio website you're viewing now. Developed with React, Node.js, and JavaScript, it not only showcases my technical skills but also highlights my projects and experiences in a dynamic and visually engaging way. The design aims to give visitors a thorough insight into my work and capabilities. Additionally, I am delving into the AI/Machine Learning sector, aiming to integrate these cutting-edge technologies into future projects. I hope to portray my commitment to excellence, ongoing learning, and my passion for pushing the boundaries in the digital landscape.`;
+const projectText = `I am excited to present my current project – this portfolio website you're viewing now. Developed with React, Node.js, and JavaScript, it not only showcases my technical skills but also highlights my projects and experiences in a dynamic and visually engaging way. The design aims to give visitors a thorough insight into my work and capabilities.  I hope to portray my commitment to excellence, ongoing learning, and my passion for pushing the boundaries in the digital landscape.`;
 
 export const Projects = () => {
   const projects = [
