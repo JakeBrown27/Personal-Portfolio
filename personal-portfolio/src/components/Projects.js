@@ -12,7 +12,7 @@ export const Projects = () => {
   const projects = [
     {
       title: 'Personal Portfolio',
-      description: 'React, Node.js, Javascript, Docker',
+      description: 'React, Node.js, Express.js, JavaScript',
       imgUrl: projImg1,
     },
   ];
